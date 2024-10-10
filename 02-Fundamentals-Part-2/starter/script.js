@@ -220,4 +220,62 @@
 
 // console.log(`First Name ${jonas.firstName}\n # of Friends: ${jonas.friends.length} \n Best Friend: ${jonas.friends[0]}`)
 
+// const jonas = {
+//     firstName : 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
+    
+//     // calcAge: function(birthYear){ //objects can also hold functions
+//     //     return 2037- this.birthYear; // these are called METHODS (this is being called to access its own property)
+//     // }
+//     calcAge: function(){
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function(){
+
+//         this.summary = `My first name is ${this.firstName} and my last name is ${this.lastName}.
+//         I was born in ${this.birthYear} and work as a ${this.job}. My friends are ${this.friends} and the statement
+//         I have ${this.hasDriversLicense ? 'a' : 'no'} driver's license. I am now ${this.calcAge()}`;
+//         return this.summary;
+//     }
+
+//     //function calcAge() function delcarations do not work
+// }
+
+// console.log(jonas.calcAge());
+// // console.log(jonas['calcAge'](1991));
+// console.log(jonas.age);
+
+// console.log(jonas.getSummary());
+
+// const john = {
+//     fullName : 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+
+//     calcBMI : function(){
+//         this.bmi = (this.height * this.height) / mass;
+//     }
+// };
+
+//     const mark = {
+//         fullName : 'Mark Miller',
+//         mass: 92,
+//         height: 1.95,
+    
+//         calcBMI : function(){
+//             this.bmi = (this.height * this.height) / mass;
+//         }
+    
+// };
+
+
+
+
+
 
