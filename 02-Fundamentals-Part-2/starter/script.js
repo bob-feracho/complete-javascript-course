@@ -13,7 +13,6 @@
 //     console.log('My name is Micah');
 // }
 
-
 // //calling /running / invoking the function
 // logger();
 // logger();
@@ -39,14 +38,13 @@
 // const age1 = calcAge1(1991);
 // console.log(age1);
 
-// //function expression 
+// //function expression
 // const calcAge2 = function (birthYear) { // anonymous function - varaible stores function - like lambdas
 //     return 2037 - birthYear;
 // }
 
 // const age2 = calcAge2(1991);
 // console.log(age1, age2);
-
 
 // const calcAge2 = function(birthYear){
 //     return 2037 - birthYear;
@@ -68,7 +66,6 @@
 
 // console.log(yearsUntilRetirement(1991, 'Bob'));
 
-
 // function cutFruitPieces(fruit){
 //     return fruit * 4;
 // }
@@ -76,7 +73,7 @@
 // function fruitProcessor(apples, oranges){
 //     const applePieces = cutFruitPieces(apples);
 //     const orangePieces = cutFruitPieces(oranges);
-    
+
 //     const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges ${apples}`;
 //     return juice;
 // }
@@ -113,7 +110,6 @@
 // for(let friend of friends){
 //     console.log(friend);
 // }
-
 
 // //const years = new Array(1991,1984, 2008, 2020);
 
@@ -167,7 +163,7 @@
 
 // console.log(friends.indexOf('Tassos')) //returns and finds index of argument. Returns -1 otherwise
 
-// //ES6 methods 
+// //ES6 methods
 // let isFriend = friends.includes('Tassos'); // returns true false based on argument. Does strict equalty (has to be same type)
 // console.log(isFriend);
 
@@ -194,7 +190,6 @@
 // //logging a property using the bracker notationj (specifies key)
 // console.log(jonas['lastName']);
 
-
 // //Advantage of square brackers, since its a string, you can concatenate and access properties depending on that
 // const nameKey = 'Name';
 // console.log(jonas[`first${nameKey}`]);
@@ -208,7 +203,7 @@
 // }
 // else{
 //     console.log('Wrong request!');
-    
+
 // }
 
 // jonas.location = 'Portugal'; // Add a property using dot notation
@@ -227,7 +222,7 @@
 //     job: 'teacher',
 //     friends: ['Michael', 'Peter', 'Steven'],
 //     hasDriversLicense: true,
-    
+
 //     // calcAge: function(birthYear){ //objects can also hold functions
 //     //     return 2037- this.birthYear; // these are called METHODS (this is being called to access its own property)
 //     // }
@@ -267,15 +262,9 @@
 //         fullName : 'Mark Miller',
 //         mass: 92,
 //         height: 1.95,
-    
+
 //         calcBMI : function(){
 //             this.bmi = (this.height * this.height) / mass;
 //         }
-    
+
 // };
-
-
-
-
-
-
