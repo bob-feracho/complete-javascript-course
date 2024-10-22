@@ -53,18 +53,38 @@ const restaurant = {
   },
 };
 
-//Logical Assignment Operators
+// //for of loop
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// for (const item of menu) {
+//   console.log(item);
+// }
 
-const rest1 = {
-  name: 'Capri',
-  //numGuests: 20,
-  numGuests: 0,
-};
+// //accessing index of for of loop
 
-const rest2 = {
-  name: 'La Piazza',
-  owner: 'Giovanni Rossi',
-};
+// for (const item of menu.entries()) {
+//   console.log(item); //logs index and name of the item
+// }
+
+// console.log(menu.entries); // logs an array iterator 
+
+// for (const [i, el] of menu.entries()){
+//   console.log(`${i + 1}: ${el}`);
+// }
+
+//so it works like a map/Hash Set
+
+// //Logical Assignment Operators
+
+// const rest1 = {
+//   name: 'Capri',
+//   //numGuests: 20,
+//   numGuests: 0,
+// };
+
+// const rest2 = {
+//   name: 'La Piazza',
+//   owner: 'Giovanni Rossi',
+// };
 
 // //Or Assignment Operators
 // // rest1.numGuests = rest1.numGuests || 10; // Short Circuiting
@@ -482,14 +502,111 @@ const books = [
     highlighted: true,
   },
 ];
+let pageSum = 0;
 
-for (let book of books) {
-  book.edition ??= 1;
+for(let book of books){
+  pageSum += book.pages;
+}
+console.log(pageSum);
+const allAuthors = [];
+for(let book of books){
+  if(typeof(book.author) == 'object'){
+    for(let author of book.author){
+      allAuthors.push(author);
+    }
+  }
+  else{
+    allAuthors.push(book.author);
+  }
+};
+console.log(allAuthors);
+
+for(let [i, name] of allAuthors.entries()){
+  console.log(`${i}: ${name}`);
 }
 
-for (let book of books) {
-  book.highlighted &&= book.thirdParty.goodreads.rating < 4.2 && false;
-}
+// for (let book of books) {
+//   book.edition ??= 1;
+// }
+
+// for (let book of books) {
+//   book.highlighted &&= book.thirdParty.goodreads.rating < 4.2 && false;
+// }
+
+//Challenge 1
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+// let players1 = game.players[0];
+// let players2 = game.players[1];
+// let [gk = players1[0], ...fieldPlayers] = [...players1];
+
+// console.log(`players1: ${players1}, GK: ${gk}, FieldPlayers: ${fieldPlayers}`);
+
+// let allPlayers = [...players1, ...players2];
+// console.log('All Players: ' + allPlayers);
+
+// let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+// console.log('Players1Final: ' + players1Final);
+
+// const {odds: {team1, x: draw, team2}} = game;
+
+// console.log(`Team 1 Odds: ${team1}, Team 2 Odds: ${team2}, Draw Odds: ${draw}`);
+
+// const printGoals = function (...playerNames) {
+//   for (let name of playerNames) {
+//     console.log(name);
+//   }
+//   console.log(playerNames.length);
+// };
+
+// printGoals(['Davies', 'Muller', 'Lewandowski', 'Kimmich']);
+// printGoals(game.scored);
+
+// team1 < team2 && console.log('Team 1 is more likely to win');
+// team2 < team1 && console.log('Team 2 is more likely to win');
+// team2 !== team1 || console.log('Both teams are likely to win equally');
+
+//console.log(fieldPlayers);
+//console.log(gk);
 
 // for(let i = 0; i<books.length; i++){
 //   books[i].onlineContent ?? console.log(`${books[i].title} provides no data about its online content`);
